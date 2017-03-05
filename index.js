@@ -78,7 +78,6 @@ function getStatus (userAgent, callback) {
       },
       error => callback(error, clone(previousStatus))
     )
-    .catch(err => console.error(err))
 }
 
 function fetchVersions (userAgent) {

@@ -21,6 +21,7 @@ suite('unit tests:', () => {
       clearInterval: sinon.spy()
     }
     // proxyquire barfs if got is a spied-on arrow function :-/
+    // eslint-disable-next-line prefer-arrow-callback, brace-style
     got = sinon.spy(function () { return Promise.resolve({ body: version }) })
     fxoi = proxyquire('.', { timers, got })
   })
@@ -197,7 +198,7 @@ suite('unit tests:', () => {
 
     test('called got correctly', () => {
       assert.equal(got.callCount, 4)
-      let args = got.args[0]
+      const args = got.args[0]
       assert.lengthOf(args, 2)
       assert.equal(args[0], 'https://accounts.firefox.com/ver.json')
       assert.deepEqual(args[1], {
@@ -322,14 +323,14 @@ suite('unit tests:', () => {
   })
 
   suite('fxoi with version difference:', () => {
-    let now, callback, cancel
+    let now, callback
 
     setup(done => {
       now = Date.now()
       sinon.stub(Date, 'now', () => now)
       callback = sinon.spy(done)
       version.version = '1.82.0'
-      cancel = fxoi(callback, {
+      fxoi(callback, {
         status: {
           train: 81,
           time: now - 1,
@@ -370,14 +371,14 @@ suite('unit tests:', () => {
   })
 
   suite('fxoi with no differences:', () => {
-    let now, callback, cancel
+    let now, callback
 
     setup(() => {
       now = Date.now()
       sinon.stub(Date, 'now', () => now)
       callback = sinon.spy()
       version.version = '1.81.0'
-      cancel = fxoi(callback, {
+      fxoi(callback, {
         status: {
           train: 81,
           time: now - 1,
