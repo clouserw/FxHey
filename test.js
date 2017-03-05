@@ -232,10 +232,10 @@ suite('unit tests:', () => {
           { name: 'oauth', train: 81, patch: 1 }
         ],
         versions: [
-          { name: 'content', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-          { name: 'auth', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-          { name: 'profile', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-          { name: 'oauth', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' }
+          { name: 'content', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'auth', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'profile', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'oauth', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
         ]
       })
     })
@@ -298,10 +298,10 @@ suite('unit tests:', () => {
             { name: 'oauth', train: 81, patch: 2 }
           ],
           versions: [
-            { name: 'content', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-            { name: 'auth', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-            { name: 'profile', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-            { name: 'oauth', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' }
+            { name: 'content', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+            { name: 'auth', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+            { name: 'profile', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+            { name: 'oauth', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
           ]
         })
       })
@@ -360,10 +360,10 @@ suite('unit tests:', () => {
         ],
         patches: [],
         versions: [
-          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' },
-          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'git://github.com/mozilla/fxa-content-server.git' }
+          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
         ]
       })
     })
@@ -457,13 +457,13 @@ suite('functional test:', () => {
     })
     assert.lengthOf(result.patches, patchCount)
     assert.equal(result.versions[0].name, 'content')
-    assert.equal(result.versions[0].repo, 'git://github.com/mozilla/fxa-content-server.git')
+    assert.equal(result.versions[0].repo, 'mozilla/fxa-content-server')
     assert.equal(result.versions[1].name, 'auth')
-    assert.equal(result.versions[1].repo, 'git@github.com:mozilla/fxa-auth-server-private.git')
+    assert.equal(result.versions[1].repo, 'mozilla/fxa-auth-server-private')
     assert.equal(result.versions[2].name, 'profile')
-    assert.equal(result.versions[2].repo, 'https://github.com/mozilla/fxa-profile-server')
+    assert.equal(result.versions[2].repo, 'mozilla/fxa-profile-server')
     assert.equal(result.versions[3].name, 'oauth')
-    assert.equal(result.versions[3].repo, 'git://github.com/mozilla/fxa-oauth-server.git')
+    assert.equal(result.versions[3].repo, 'mozilla/fxa-oauth-server')
   })
 })
 

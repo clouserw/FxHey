@@ -8,6 +8,7 @@ const pkg = require('./package.json')
 const DEFAULT_RATE = 1000 * 60 * 60
 const MINIMUM_RATE = DEFAULT_RATE / 2
 const DEFAULT_USER_AGENT = `FxOi/${pkg.version} (https://github.com/philbooth/fxoi)`
+const REPO_MATCH = /mozilla\/fxa(?:-[a-z]+){2}(?:-private)?/
 const SERVERS = [
   { name: 'content', url: 'https://accounts.firefox.com/ver.json' },
   { name: 'auth', url: 'https://api.accounts.firefox.com/__version__' },
@@ -88,12 +89,16 @@ function fetchVersions (userAgent) {
         return {
           name: server.name,
           version: body.version,
-          repo: body.source,
+          repo: parseRepo(body.source),
           tag: `v${body.version}`,
           commit: body.commit
         }
       })
   }))
+}
+
+function parseRepo (source) {
+  return REPO_MATCH.exec(source)[0]
 }
 
 function generateStatus (versions) {
