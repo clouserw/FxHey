@@ -26,7 +26,7 @@ I forget where we are
 in the Firefox Accounts
 deployment train cycle.
 Sometimes,
-this makes me [look like a dick](https://github.com/mozilla/fxa-activity-metrics/issues/57#issuecomment-283642668).
+[this makes me look like a dick](https://github.com/mozilla/fxa-activity-metrics/issues/57#issuecomment-283642668).
 
 To work round this
 (fixing the root cause
