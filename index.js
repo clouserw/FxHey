@@ -71,7 +71,9 @@ function getStatus (userAgent, callback) {
     .then(
       status => {
         previousStatus = clone(status)
-        callback(null, status)
+        if (status.diffs.length > 0) {
+          callback(null, status)
+        }
       },
       error => callback(error, clone(previousStatus))
     )
