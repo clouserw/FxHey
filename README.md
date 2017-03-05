@@ -1,7 +1,7 @@
 # FxOi!
 
 [![Package status](https://img.shields.io/npm/v/fxoi.svg?style=flat-square)](https://www.npmjs.com/package/fxoi)
-[![Build status](https://img.shields.io/travis/philbooth/fxoi.svg?style=flat-square)](https://travis-ci.org/philbooth/fxoi)
+[![Build status](https://img.shields.io/travis/philbooth/FxOi.svg?style=flat-square)](https://travis-ci.org/philbooth/FxOi)
 [![License](https://img.shields.io/github/license/philbooth/fxoi.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 Live train announcements for [Firefox Accounts](https://accounts.firefox.com/).
