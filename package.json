@@ -1,0 +1,31 @@
+{
+  "name": "fxoi",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "FxOi! Live train announcements for Firefox Accounts",
+  "keywords": [
+    "fxa",
+    "mozilla",
+    "firefox",
+    "accounts",
+    "dashboard",
+    "release",
+    "version",
+    "train",
+    "information"
+  ],
+  "author": "Phil Booth <pmbooth@gmail.com> (https://philbooth.me/)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --es_staging --ui tdd test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philbooth/fxoi.git"
+  },
+  "homepage": "https://github.com/philbooth/fxoi#readme",
+  "bugs": {
+    "url": "https://github.com/philbooth/fxoi/issues"
+  }
+}
