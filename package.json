@@ -2,7 +2,7 @@
   "name": "fxoi",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "FxOi! Live train announcements for Firefox Accounts",
+  "description": "FxOi! Live train announcements for Firefox Accounts.",
   "keywords": [
     "fxa",
     "mozilla",
