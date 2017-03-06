@@ -1,5 +1,12 @@
 # Change log
 
+## 0.1.1
+
+* chore: update link text (ab7c406)
+* fix: wow, travis is pedantic (abc166d)
+* fix: add missing eslint dependency (66cefcf)
+* fix: force immediate callback if set (ba9cec9)
+
 ## 0.1.0
 
 * feature: fetch FxA version data from production servers (962b10f)
