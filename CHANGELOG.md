@@ -1,5 +1,9 @@
 # Change log
 
+## 0.1.2
+
+* chore: rename from FxOi to FxHey (1a7e3dd)
+
 ## 0.1.1
 
 * chore: update link text (ab7c406)
