@@ -53,7 +53,7 @@ module.exports = (
   previousStatus = clone(status)
 
   if (immediate) {
-    getStatus(userAgent, callback)
+    getStatus(userAgent, callback, true)
   }
 
   let interval = setInterval(getStatus.bind(null, userAgent, callback), rate)
@@ -66,13 +66,13 @@ module.exports = (
   }
 }
 
-function getStatus (userAgent, callback) {
+function getStatus (userAgent, callback, forceCallback) {
   return fetchVersions(userAgent)
     .then(generateStatus)
     .then(
       status => {
         previousStatus = clone(status)
-        if (status.diffs.length > 0) {
+        if (status.diffs.length > 0 || forceCallback) {
           callback(null, status)
         }
       },
