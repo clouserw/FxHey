@@ -13,7 +13,7 @@ suite('unit tests:', () => {
     commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e',
     source: 'git://github.com/mozilla/fxa-content-server.git'
   }
-  let timers, got, fxoi
+  let timers, got, fxhey
 
   setup(() => {
     timers = {
@@ -23,12 +23,12 @@ suite('unit tests:', () => {
     // proxyquire barfs if got is a spied-on arrow function :-/
     // eslint-disable-next-line prefer-arrow-callback, brace-style
     got = sinon.spy(function () { return Promise.resolve({ body: version }) })
-    fxoi = proxyquire('.', { timers, got })
+    fxhey = proxyquire('.', { timers, got })
   })
 
   test('interface is correct', () => {
-    assert.isFunction(fxoi)
-    assert.lengthOf(fxoi, 1)
+    assert.isFunction(fxhey)
+    assert.lengthOf(fxhey, 1)
   })
 
   test('timers were not invoked', () => {
@@ -37,23 +37,23 @@ suite('unit tests:', () => {
   })
 
   test('throws if rate is less than every half an hour', () => {
-    assert.throws(() => fxoi(() => {}, { rate: 1799999 }))
+    assert.throws(() => fxhey(() => {}, { rate: 1799999 }))
   })
 
   test('does not throw if rate is every half an hour', () => {
-    assert.doesNotThrow(() => fxoi(() => {}, { rate: 1800000 }))
+    assert.doesNotThrow(() => fxhey(() => {}, { rate: 1800000 }))
   })
 
   test('throws if user agent is the empty string', () => {
-    assert.throws(() => fxoi(() => {}, { userAgent: '' }))
+    assert.throws(() => fxhey(() => {}, { userAgent: '' }))
   })
 
   test('does not throw if user agent is a non-empty string', () => {
-    assert.doesNotThrow(() => fxoi(() => {}, { userAgent: 'wibble' }))
+    assert.doesNotThrow(() => fxhey(() => {}, { userAgent: 'wibble' }))
   })
 
   test('throws if initial train is zero', () => {
-    assert.throws(() => fxoi(() => {}, {
+    assert.throws(() => fxhey(() => {}, {
       status: {
         train: 0,
         time: Date.now(),
@@ -68,7 +68,7 @@ suite('unit tests:', () => {
   })
 
   test('throws if initial time is zero', () => {
-    assert.throws(() => fxoi(() => {}, {
+    assert.throws(() => fxhey(() => {}, {
       status: {
         train: 81,
         time: 0,
@@ -83,7 +83,7 @@ suite('unit tests:', () => {
   })
 
   test('throws if initial versions has length three', () => {
-    assert.throws(() => fxoi(() => {}, {
+    assert.throws(() => fxhey(() => {}, {
       status: {
         train: 81,
         time: Date.now(),
@@ -97,7 +97,7 @@ suite('unit tests:', () => {
   })
 
   test('throws if version train is zero', () => {
-    assert.throws(() => fxoi(() => {}, {
+    assert.throws(() => fxhey(() => {}, {
       status: {
         train: 81,
         time: Date.now(),
@@ -112,7 +112,7 @@ suite('unit tests:', () => {
   })
 
   test('throws if version train is greater than initial train', () => {
-    assert.throws(() => fxoi(() => {}, {
+    assert.throws(() => fxhey(() => {}, {
       status: {
         train: 81,
         time: Date.now(),
@@ -127,7 +127,7 @@ suite('unit tests:', () => {
   })
 
   test('throws if version patch is negative', () => {
-    assert.throws(() => fxoi(() => {}, {
+    assert.throws(() => fxhey(() => {}, {
       status: {
         train: 81,
         time: Date.now(),
@@ -142,7 +142,7 @@ suite('unit tests:', () => {
   })
 
   test('does not throw if initial status is valid', () => {
-    assert.doesNotThrow(() => fxoi(() => {}, {
+    assert.doesNotThrow(() => fxhey(() => {}, {
       status: {
         train: 81,
         time: Date.now(),
@@ -157,14 +157,14 @@ suite('unit tests:', () => {
   })
 
   test('does not throw without options', () => {
-    assert.doesNotThrow(() => fxoi(() => {}))
+    assert.doesNotThrow(() => fxhey(() => {}))
   })
 
   test('throws if callback is not a function', () => {
-    assert.throws(() => fxoi({}))
+    assert.throws(() => fxhey({}))
   })
 
-  suite('fxoi with patch difference:', () => {
+  suite('fxhey with patch difference:', () => {
     let now, afterCallback, callback, cancel
 
     setup(done => {
@@ -173,7 +173,7 @@ suite('unit tests:', () => {
       afterCallback = done
       callback = sinon.spy(() => afterCallback())
       version.version = '0.81.1'
-      cancel = fxoi(callback, {
+      cancel = fxhey(callback, {
         status: {
           train: 81,
           time: now - 1,
@@ -204,7 +204,7 @@ suite('unit tests:', () => {
       assert.deepEqual(args[1], {
         json: true,
         headers: {
-          'User-Agent': `FxOi/${pkg.version} (https://github.com/philbooth/fxoi)`
+          'User-Agent': `FxHey/${pkg.version} (https://github.com/philbooth/fxhey)`
         }
       })
       assert.equal(got.args[1][0], 'https://api.accounts.firefox.com/__version__')
@@ -322,7 +322,7 @@ suite('unit tests:', () => {
     })
   })
 
-  suite('fxoi with version difference:', () => {
+  suite('fxhey with version difference:', () => {
     let now, callback
 
     setup(done => {
@@ -330,7 +330,7 @@ suite('unit tests:', () => {
       sinon.stub(Date, 'now', () => now)
       callback = sinon.spy(done)
       version.version = '1.82.0'
-      fxoi(callback, {
+      fxhey(callback, {
         status: {
           train: 81,
           time: now - 1,
@@ -370,7 +370,7 @@ suite('unit tests:', () => {
     })
   })
 
-  suite('fxoi with no differences:', () => {
+  suite('fxhey with no differences:', () => {
     let now, callback
 
     setup(() => {
@@ -378,7 +378,7 @@ suite('unit tests:', () => {
       sinon.stub(Date, 'now', () => now)
       callback = sinon.spy()
       version.version = '1.81.0'
-      fxoi(callback, {
+      fxhey(callback, {
         status: {
           train: 81,
           time: now - 1,

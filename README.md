@@ -1,8 +1,8 @@
-# FxOi!
+# FxHey!
 
-[![Package status](https://img.shields.io/npm/v/fxoi.svg?style=flat-square)](https://www.npmjs.com/package/fxoi)
-[![Build status](https://img.shields.io/travis/philbooth/FxOi.svg?style=flat-square)](https://travis-ci.org/philbooth/FxOi)
-[![License](https://img.shields.io/github/license/philbooth/fxoi.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Package status](https://img.shields.io/npm/v/fxhey.svg?style=flat-square)](https://www.npmjs.com/package/fxhey)
+[![Build status](https://img.shields.io/travis/philbooth/FxHey.svg?style=flat-square)](https://travis-ci.org/philbooth/FxHey)
+[![License](https://img.shields.io/github/license/philbooth/fxhey.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 Live train announcements for [Firefox Accounts](https://accounts.firefox.com/).
 
@@ -45,7 +45,7 @@ it's not meant for you.
 But if you insist:
 
 ```
-npm i fxoi --save
+npm i fxhey --save
 ```
 
 ## How do I use it?
@@ -55,18 +55,18 @@ npm i fxoi --save
 Use `require`:
 
 ```js
-const fxoi = require('fxoi')
+const fxhey = require('fxhey')
 ```
 
 ### How do I register for announcements?
 
-Call `fxoi(callback, options)`,
+Call `fxhey(callback, options)`,
 where `callback` is a function
 that will be invoked whenever
 the deployed versions have changed:
 
 ```js
-const cancel = fxoi(status => view.refresh(status))
+const cancel = fxhey(status => view.refresh(status))
 ```
 
 Here,

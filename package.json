@@ -1,8 +1,8 @@
 {
-  "name": "fxoi",
+  "name": "fxhey",
   "version": "0.1.1",
   "license": "MIT",
-  "description": "FxOi! Live train announcements for Firefox Accounts.",
+  "description": "FxHey! Live train announcements for Firefox Accounts.",
   "keywords": [
     "fxa",
     "mozilla",
@@ -25,11 +25,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philbooth/fxoi.git"
+    "url": "git+https://github.com/philbooth/FxHey.git"
   },
-  "homepage": "https://github.com/philbooth/fxoi#readme",
+  "homepage": "https://github.com/philbooth/FxHey#readme",
   "bugs": {
-    "url": "https://github.com/philbooth/fxoi/issues"
+    "url": "https://github.com/philbooth/FxHey/issues"
   },
   "dependencies": {
     "check-types": "^7.1.5",
