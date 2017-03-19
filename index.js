@@ -101,10 +101,18 @@ function parseRepo (source) {
 }
 
 function generateStatus (versions) {
-  const result = versions.reduce((status, version, index) => {
+  const result = versions.reduce((status, version) => {
     const { train, patch } = parseVersion(version.version)
     const { name, tag, commit, repo } = version
-    const { train: previousTrain, patch: previousPatch } = previousStatus.versions[index]
+    let previousVersion
+    previousStatus.versions.some(candidateVersion => {
+      if (candidateVersion.name === name) {
+        previousVersion = candidateVersion
+        return true
+      }
+      return false
+    })
+    const { train: previousTrain, patch: previousPatch } = previousVersion
 
     if (train > status.train) {
       status.train = train
@@ -152,6 +160,10 @@ function parseVersion (version) {
 function clone (value) {
   if (! value || typeof value !== 'object') {
     return value
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(item => clone(item))
   }
 
   return Object.keys(value).reduce((cloned, key) => {

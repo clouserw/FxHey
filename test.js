@@ -58,10 +58,10 @@ suite('unit tests:', () => {
         train: 0,
         time: Date.now(),
         versions: [
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: 0 },
+          { name: 'profile', train: 81, patch: 0 },
+          { name: 'oauth', train: 81, patch: 0 }
         ]
       }
     }))
@@ -73,10 +73,10 @@ suite('unit tests:', () => {
         train: 81,
         time: 0,
         versions: [
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: 0 },
+          { name: 'profile', train: 81, patch: 0 },
+          { name: 'oauth', train: 81, patch: 0 }
         ]
       }
     }))
@@ -88,9 +88,9 @@ suite('unit tests:', () => {
         train: 81,
         time: Date.now(),
         versions: [
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: 0 },
+          { name: 'oauth', train: 81, patch: 0 }
         ]
       }
     }))
@@ -102,10 +102,10 @@ suite('unit tests:', () => {
         train: 81,
         time: Date.now(),
         versions: [
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 0, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: 0 },
+          { name: 'profile', train: 81, patch: 0 },
+          { name: 'oauth', train: 0, patch: 0 }
         ]
       }
     }))
@@ -117,10 +117,10 @@ suite('unit tests:', () => {
         train: 81,
         time: Date.now(),
         versions: [
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 82, patch: 0 },
-          { train: 81, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: 0 },
+          { name: 'profile', train: 82, patch: 0 },
+          { name: 'oauth', train: 81, patch: 0 }
         ]
       }
     }))
@@ -132,10 +132,10 @@ suite('unit tests:', () => {
         train: 81,
         time: Date.now(),
         versions: [
-          { train: 81, patch: 0 },
-          { train: 81, patch: -1 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: -1 },
+          { name: 'profile', train: 81, patch: 0 },
+          { name: 'oauth', train: 81, patch: 0 }
         ]
       }
     }))
@@ -147,10 +147,10 @@ suite('unit tests:', () => {
         train: 81,
         time: Date.now(),
         versions: [
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 },
-          { train: 81, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: 0 },
+          { name: 'profile', train: 81, patch: 0 },
+          { name: 'oauth', train: 81, patch: 0 }
         ]
       }
     }))
@@ -172,16 +172,16 @@ suite('unit tests:', () => {
       sinon.stub(Date, 'now', () => now)
       afterCallback = done
       callback = sinon.spy(() => afterCallback())
-      version.version = '0.81.1'
+      version.version = '0.81.5'
       cancel = fxhey(callback, {
         status: {
           train: 81,
           time: now - 1,
           versions: [
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 }
+            { name: 'content', train: 81, patch: 1 },
+            { name: 'auth', train: 81, patch: 2 },
+            { name: 'profile', train: 81, patch: 3 },
+            { name: 'oauth', train: 81, patch: 4 }
           ]
         }
       })
@@ -221,22 +221,22 @@ suite('unit tests:', () => {
         time: now,
         train: 81,
         diffs: [
-          { name: 'content', current: { train: 81, patch: 1 }, previous: { train: 81, patch: 0 } },
-          { name: 'auth', current: { train: 81, patch: 1 }, previous: { train: 81, patch: 0 } },
-          { name: 'profile', current: { train: 81, patch: 1 }, previous: { train: 81, patch: 0 } },
-          { name: 'oauth', current: { train: 81, patch: 1 }, previous: { train: 81, patch: 0 } }
+          { name: 'content', current: { train: 81, patch: 5 }, previous: { train: 81, patch: 1 } },
+          { name: 'auth', current: { train: 81, patch: 5 }, previous: { train: 81, patch: 2 } },
+          { name: 'profile', current: { train: 81, patch: 5 }, previous: { train: 81, patch: 3 } },
+          { name: 'oauth', current: { train: 81, patch: 5 }, previous: { train: 81, patch: 4 } }
         ],
         patches: [
-          { name: 'content', train: 81, patch: 1 },
-          { name: 'auth', train: 81, patch: 1 },
-          { name: 'profile', train: 81, patch: 1 },
-          { name: 'oauth', train: 81, patch: 1 }
+          { name: 'content', train: 81, patch: 5 },
+          { name: 'auth', train: 81, patch: 5 },
+          { name: 'profile', train: 81, patch: 5 },
+          { name: 'oauth', train: 81, patch: 5 }
         ],
         versions: [
-          { name: 'content', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
-          { name: 'auth', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
-          { name: 'profile', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
-          { name: 'oauth', train: 81, patch: 1, tag: 'v0.81.1', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
+          { name: 'content', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'auth', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'profile', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'oauth', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
         ]
       })
     })
@@ -272,7 +272,7 @@ suite('unit tests:', () => {
     suite('after interval with difference:', () => {
       setup(done => {
         afterCallback = done
-        version.version = '0.81.2'
+        version.version = '0.81.6'
         timers.setInterval.args[0][0]()
       })
 
@@ -287,22 +287,22 @@ suite('unit tests:', () => {
           time: now,
           train: 81,
           diffs: [
-            { name: 'content', current: { train: 81, patch: 2 }, previous: { train: 81, patch: 1 } },
-            { name: 'auth', current: { train: 81, patch: 2 }, previous: { train: 81, patch: 1 } },
-            { name: 'profile', current: { train: 81, patch: 2 }, previous: { train: 81, patch: 1 } },
-            { name: 'oauth', current: { train: 81, patch: 2 }, previous: { train: 81, patch: 1 } }
+            { name: 'content', current: { train: 81, patch: 6 }, previous: { train: 81, patch: 5 } },
+            { name: 'auth', current: { train: 81, patch: 6 }, previous: { train: 81, patch: 5 } },
+            { name: 'profile', current: { train: 81, patch: 6 }, previous: { train: 81, patch: 5 } },
+            { name: 'oauth', current: { train: 81, patch: 6 }, previous: { train: 81, patch: 5 } }
           ],
           patches: [
-            { name: 'content', train: 81, patch: 2 },
-            { name: 'auth', train: 81, patch: 2 },
-            { name: 'profile', train: 81, patch: 2 },
-            { name: 'oauth', train: 81, patch: 2 }
+            { name: 'content', train: 81, patch: 6 },
+            { name: 'auth', train: 81, patch: 6 },
+            { name: 'profile', train: 81, patch: 6 },
+            { name: 'oauth', train: 81, patch: 6 }
           ],
           versions: [
-            { name: 'content', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
-            { name: 'auth', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
-            { name: 'profile', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
-            { name: 'oauth', train: 81, patch: 2, tag: 'v0.81.2', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
+            { name: 'content', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+            { name: 'auth', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+            { name: 'profile', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+            { name: 'oauth', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
           ]
         })
       })
@@ -335,10 +335,10 @@ suite('unit tests:', () => {
           train: 81,
           time: now - 1,
           versions: [
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 }
+            { name: 'content', train: 81, patch: 0 },
+            { name: 'auth', train: 81, patch: 0 },
+            { name: 'profile', train: 81, patch: 0 },
+            { name: 'oauth', train: 81, patch: 0 }
           ]
         }
       })
@@ -383,10 +383,10 @@ suite('unit tests:', () => {
           train: 81,
           time: now - 1,
           versions: [
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 },
-            { train: 81, patch: 0 }
+            { name: 'content', train: 81, patch: 0 },
+            { name: 'auth', train: 81, patch: 0 },
+            { name: 'profile', train: 81, patch: 0 },
+            { name: 'oauth', train: 81, patch: 0 }
           ]
         }
       })
@@ -404,6 +404,54 @@ suite('unit tests:', () => {
       assert.equal(callback.callCount, 0)
     })
   })
+
+  suite('fxhey with version and ordering differences:', () => {
+    let now, callback
+
+    setup(done => {
+      now = Date.now()
+      sinon.stub(Date, 'now', () => now)
+      callback = sinon.spy(done)
+      version.version = '1.82.0'
+      fxhey(callback, {
+        status: {
+          train: 81,
+          time: now - 1,
+          versions: [
+            { name: 'oauth', train: 81, patch: 1 },
+            { name: 'profile', train: 81, patch: 2 },
+            { name: 'auth', train: 81, patch: 3 },
+            { name: 'content', train: 81, patch: 4 }
+          ]
+        }
+      })
+    })
+
+    teardown(() => {
+      Date.now.restore()
+    })
+
+    test('called callback correctly', () => {
+      assert.equal(callback.callCount, 1)
+      assert.deepEqual(callback.args[0][1], {
+        time: now,
+        train: 82,
+        diffs: [
+          { name: 'content', current: { train: 82, patch: 0 }, previous: { train: 81, patch: 4 } },
+          { name: 'auth', current: { train: 82, patch: 0 }, previous: { train: 81, patch: 3 } },
+          { name: 'profile', current: { train: 82, patch: 0 }, previous: { train: 81, patch: 2 } },
+          { name: 'oauth', current: { train: 82, patch: 0 }, previous: { train: 81, patch: 1 } }
+        ],
+        patches: [],
+        versions: [
+          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' },
+          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server' }
+        ]
+      })
+    })
+  })
 })
 
 suite('functional test:', () => {
@@ -418,12 +466,12 @@ suite('functional test:', () => {
     }, {
       status: {
         time: Date.UTC(2017, 0, 1),
-        train: 80,
+        train: 81,
         versions: [
-          { train: 80, patch: 0 },
-          { train: 80, patch: 0 },
-          { train: 80, patch: 0 },
-          { train: 80, patch: 0 }
+          { name: 'content', train: 81, patch: 0 },
+          { name: 'auth', train: 81, patch: 0 },
+          { name: 'profile', train: 81, patch: 0 },
+          { name: 'oauth', train: 81, patch: 0 }
         ]
       }
     })
