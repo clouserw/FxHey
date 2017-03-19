@@ -1,5 +1,9 @@
 # Change log
 
+## 0.1.3
+
+* fix: tolerate misordered initial status (b188c12)
+
 ## 0.1.2
 
 * chore: rename from FxOi to FxHey (1a7e3dd)
