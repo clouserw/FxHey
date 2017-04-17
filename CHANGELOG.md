@@ -1,5 +1,10 @@
 # Change log
 
+## 0.2.0
+
+* feature: add discrete time properties for each server (7bfdd77)
+* chore: update dev dependencies (195dc11)
+
 ## 0.1.3
 
 * fix: tolerate misordered initial status (b188c12)
