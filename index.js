@@ -105,6 +105,7 @@ function generateStatus (versions) {
     const { train, patch } = parseVersion(version.version)
     const { name, tag, commit, repo } = version
     let previousVersion
+    let time
     previousStatus.versions.some(candidateVersion => {
       if (candidateVersion.name === name) {
         previousVersion = candidateVersion
@@ -118,22 +119,25 @@ function generateStatus (versions) {
       status.train = train
     }
 
-    if (train !== previousTrain || patch !== previousPatch) {
+    if (train === previousTrain && patch === previousPatch) {
+      time = previousVersion.time
+    } else {
+      if (status.time === previousStatus.time) {
+        status.time = Date.now()
+      }
+      time = status.time
       status.diffs.push({
         name,
         current: { train, patch },
         previous: { train: previousTrain, patch: previousPatch }
       })
-      if (status.time === previousStatus.time) {
-        status.time = Date.now()
-      }
     }
 
     if (patch > 0 && train === status.train) {
       status.patches.push({ name, train, patch })
     }
 
-    status.versions.push({ name, train, patch, tag, commit, repo })
+    status.versions.push({ name, train, patch, tag, commit, repo, time })
 
     return status
   }, {
