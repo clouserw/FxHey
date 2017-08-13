@@ -1,5 +1,9 @@
 # Change log
 
+## 0.2.1
+
+* fix: prevent undefined reference when no previous versions exist (b228acd)
+
 ## 0.2.0
 
 * feature: add discrete time properties for each server (7bfdd77)
