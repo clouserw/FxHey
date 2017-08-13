@@ -113,7 +113,7 @@ function generateStatus (versions) {
       }
       return false
     })
-    const { train: previousTrain, patch: previousPatch } = previousVersion
+    const { train: previousTrain, patch: previousPatch } = previousVersion || {}
 
     if (train > status.train) {
       status.train = train
