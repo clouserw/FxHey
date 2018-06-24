@@ -1,5 +1,11 @@
 # Change log
 
+## 0.2.2
+
+### Other changes
+
+* project: migrate to gitlab (2da1a20)
+
 ## 0.2.1
 
 * fix: prevent undefined reference when no previous versions exist (b228acd)
