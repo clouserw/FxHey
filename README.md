@@ -1,8 +1,9 @@
 # FxHey!
 
-[![Package status](https://img.shields.io/npm/v/fxhey.svg?style=flat-square)](https://www.npmjs.com/package/fxhey)
-[![Build status](https://img.shields.io/travis/philbooth/FxHey.svg?style=flat-square)](https://travis-ci.org/philbooth/FxHey)
-[![License](https://img.shields.io/github/license/philbooth/fxhey.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Build status](https://gitlab.com/philbooth/FxHey/badges/master/pipeline.svg)](https://gitlab.com/philbooth/FxHey/pipelines)
+[![Package status](https://img.shields.io/npm/v/fxhey.svg)](https://www.npmjs.com/package/fxhey)
+[![Downloads](https://img.shields.io/npm/dm/fxhey.svg)](https://www.npmjs.com/package/fxhey)
+[![License](https://img.shields.io/npm/l/fxhey.svg)](https://opensource.org/licenses/MIT)
 
 Live train announcements for [Firefox Accounts](https://accounts.firefox.com/).
 

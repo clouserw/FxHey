@@ -169,7 +169,7 @@ suite('unit tests:', () => {
 
     setup(done => {
       now = Date.now()
-      sinon.stub(Date, 'now', () => now)
+      sinon.stub(Date, 'now').callsFake(() => now)
       afterCallback = done
       callback = sinon.spy(() => afterCallback())
       version.version = '0.81.5'
@@ -204,7 +204,7 @@ suite('unit tests:', () => {
       assert.deepEqual(args[1], {
         json: true,
         headers: {
-          'User-Agent': `FxHey/${pkg.version} (https://github.com/philbooth/fxhey)`
+          'User-Agent': `FxHey/${pkg.version} (https://gitlab.com/philbooth/fxhey)`
         }
       })
       assert.equal(got.args[1][0], 'https://api.accounts.firefox.com/__version__')
@@ -327,7 +327,7 @@ suite('unit tests:', () => {
 
     setup(done => {
       now = Date.now()
-      sinon.stub(Date, 'now', () => now)
+      sinon.stub(Date, 'now').callsFake(() => now)
       callback = sinon.spy(done)
       version.version = '1.82.0'
       fxhey(callback, {
@@ -375,7 +375,7 @@ suite('unit tests:', () => {
 
     setup(done => {
       now = Date.now()
-      sinon.stub(Date, 'now', () => now)
+      sinon.stub(Date, 'now').callsFake(() => now)
       callback = sinon.spy(done)
       version.version = '1.82.0'
       fxhey(callback, {
@@ -420,7 +420,7 @@ suite('unit tests:', () => {
 
     setup(() => {
       now = Date.now()
-      sinon.stub(Date, 'now', () => now)
+      sinon.stub(Date, 'now').callsFake(() => now)
       callback = sinon.spy()
       version.version = '1.81.0'
       fxhey(callback, {
@@ -455,7 +455,7 @@ suite('unit tests:', () => {
 
     setup(done => {
       now = Date.now()
-      sinon.stub(Date, 'now', () => now)
+      sinon.stub(Date, 'now').callsFake(() => now)
       callback = sinon.spy(done)
       version.version = '1.82.0'
       fxhey(callback, {

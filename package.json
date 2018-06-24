@@ -25,22 +25,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philbooth/FxHey.git"
+    "url": "git+https://gitlab.com/philbooth/FxHey.git"
   },
-  "homepage": "https://github.com/philbooth/FxHey#readme",
+  "homepage": "https://gitlab.com/philbooth/FxHey#readme",
   "bugs": {
-    "url": "https://github.com/philbooth/FxHey/issues"
+    "url": "https://gitlab.com/philbooth/FxHey/issues"
   },
   "dependencies": {
     "check-types": "^7.1.5",
     "got": "^6.7.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
     "eslint": "^3.19.0",
-    "mocha": "^3.2.0",
-    "please-release-me": "^1.0.3",
-    "proxyquire": "^1.7.11",
-    "sinon": "^2.1.0"
+    "mocha": "^5.2.0",
+    "please-release-me": "^2.0.2",
+    "proxyquire": "^2.0.1",
+    "sinon": "^6.0.0"
   }
 }

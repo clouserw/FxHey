@@ -7,7 +7,7 @@ const pkg = require('./package.json')
 
 const DEFAULT_RATE = 1000 * 60 * 60
 const MINIMUM_RATE = DEFAULT_RATE / 2
-const DEFAULT_USER_AGENT = `FxHey/${pkg.version} (https://github.com/philbooth/fxhey)`
+const DEFAULT_USER_AGENT = `FxHey/${pkg.version} (https://gitlab.com/philbooth/fxhey)`
 const REPO_MATCH = /mozilla\/fxa(?:-[a-z]+){2}(?:-private)?/
 const SERVERS = [
   { name: 'content', url: 'https://accounts.firefox.com/ver.json' },
