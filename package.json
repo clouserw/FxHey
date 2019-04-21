@@ -32,15 +32,15 @@
     "url": "https://gitlab.com/philbooth/FxHey/issues"
   },
   "dependencies": {
-    "check-types": "^7.1.5",
-    "got": "^6.7.1"
+    "check-types": "^8.0.2",
+    "got": "^9.6.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^3.19.0",
-    "mocha": "^5.2.0",
-    "please-release-me": "^2.0.2",
-    "proxyquire": "^2.0.1",
-    "sinon": "^6.0.0"
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.2",
+    "please-release-me": "^2.1.2",
+    "proxyquire": "^2.1.0",
+    "sinon": "^7.3.2"
   }
 }
