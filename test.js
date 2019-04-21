@@ -11,7 +11,7 @@ suite('unit tests:', () => {
   const interval = 'foo'
   const version = {
     commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e',
-    source: 'git://github.com/mozilla/fxa-content-server.git'
+    source: 'git://github.com/mozilla/fxa.git'
   }
   let timers, got, fxhey
 
@@ -233,10 +233,10 @@ suite('unit tests:', () => {
           { name: 'oauth', train: 81, patch: 5 }
         ],
         versions: [
-          { name: 'content', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'auth', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'profile', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'oauth', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now }
+          { name: 'content', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'auth', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'profile', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'oauth', train: 81, patch: 5, tag: 'v0.81.5', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now }
         ]
       })
     })
@@ -299,10 +299,10 @@ suite('unit tests:', () => {
             { name: 'oauth', train: 81, patch: 6 }
           ],
           versions: [
-            { name: 'content', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-            { name: 'auth', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-            { name: 'profile', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-            { name: 'oauth', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now }
+            { name: 'content', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+            { name: 'auth', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+            { name: 'profile', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+            { name: 'oauth', train: 81, patch: 6, tag: 'v0.81.6', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now }
           ]
         })
       })
@@ -361,10 +361,10 @@ suite('unit tests:', () => {
         ],
         patches: [],
         versions: [
-          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now }
+          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now }
         ]
       })
     })
@@ -406,10 +406,10 @@ suite('unit tests:', () => {
         ],
         patches: [],
         versions: [
-          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now - 1 },
-          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now - 1 },
-          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now - 1 },
-          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now }
+          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now - 1 },
+          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now - 1 },
+          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now - 1 },
+          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now }
         ]
       })
     })
@@ -489,10 +489,10 @@ suite('unit tests:', () => {
         ],
         patches: [],
         versions: [
-          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now },
-          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa-content-server', time: now }
+          { name: 'content', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'auth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'profile', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now },
+          { name: 'oauth', train: 82, patch: 0, tag: 'v1.82.0', commit: '75ca755f94be44c06c55fab8e3fccfedb0e4b59e', repo: 'mozilla/fxa', time: now }
         ]
       })
     })
