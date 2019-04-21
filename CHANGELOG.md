@@ -1,5 +1,15 @@
 # Change log
 
+## 0.2.3
+
+### Bug fixes
+
+* data: match new monorepo name (a14fcc7)
+
+### Other changes
+
+* package: update dependencies (49acd50)
+
 ## 0.2.2
 
 ### Other changes
